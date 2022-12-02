@@ -12,6 +12,8 @@ const AlunoModel = require('./model/alunoModel');
 
 
 const LivroController = require('./controller/LivroController')
+const CategoriaController = require('./controller/CategoriaController');
+const EditoraController = require('./controller/EditoraController')
 
 
 dotenv.config()
@@ -24,7 +26,8 @@ app.use(bodyParser.json())
 
 
 app.use('/livro',LivroController)
-// app.use(EditoraModel)
+app.use('/categoria',CategoriaController)
+app.use('/editora', EditoraController)
 // app.use(FuncionarioModel)
 // app.use(CategoriaModel)
 
