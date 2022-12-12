@@ -9,7 +9,8 @@ const EditoraModel = require('./model/editoraModel')
 const FuncionarioModel = require('./model/funcionarioMdel')
 const CategoriaModel = require('./model/categoriaModel')
 const AlunoModel = require('./model/alunoModel');
-const EmprestimoModel = require('./model/emprestimoModel')
+const EmprestimoModel = require('./model/emprestimoModel');
+const ItemEmprestimo = require('./model/itemEmprestimoModel');
 
 
 

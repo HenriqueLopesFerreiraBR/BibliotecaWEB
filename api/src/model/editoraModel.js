@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const connection = require('../database/connection');
 
+const Livro = require('./livroModel')
 
 const Editora = connection.define('editora',{
     nome:{
@@ -20,6 +21,8 @@ const Editora = connection.define('editora',{
         allowNull: false
     }
 })
+
+
 
 // Editora.sync({force:true})
 

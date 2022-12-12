@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize');
 const connection = require('../database/connection');
 
+const Editora = require('./editoraModel')
+
 const Livro = connection.define('livros',{
     titulo:{
         type: Sequelize.STRING,
@@ -19,6 +21,13 @@ const Livro = connection.define('livros',{
     }
 })
 
-//   Livro.sync({force:false})
+
+Livro.belongsTo(Editora,{
+    constraint: true,
+    foreignKey: 'idEditora'
+})
+
+
+ Livro.sync({force:true})
 
 module.exports = Livro;
